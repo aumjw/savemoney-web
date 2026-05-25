@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ===== กล่องยอดรวม 3 ใบ ===== */
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+  flex: 2;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e0e0e0;
+}
+
+.box-1 p,
+.box-2 p,
+.box-3 p {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.box-1 h2 {
+  color: #1d9e75;
+} /* รายรับ = เขียว */
+.box-2 h2 {
+  color: #d85a30;
+} /* รายจ่าย = ส้ม */
+.box-3 h2 {
+  color: #333;
+}
+
+/* ===== Form ===== */
+.about {
+  background: white;
+  margin: 0 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.about input {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.about input:focus {
+  border-color: #1d9e75;
+}
+
+/* ===== ปุ่มประเภท ===== */
+.btn {
+  flex-direction: column;
+}
+
+.btn button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn button.active-income {
+  background: #e1f5ee;
+  border-color: #1d9e75;
+  color: #0f6e56;
+}
+
+.btn button.active-expense {
+  background: #faece7;
+  border-color: #d85a30;
+  color: #993c1d;
+}
+
+/* ===== ปุ่มเพิ่มรายการ ===== */
+.add-list button {
+  padding: 10px;
+  background: #1d9e75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.add-list button:hover {
+  background: #0f6e56;
+}
+
+.reset button {
+  padding: 10px;
+  background: #cd1d1d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: #d85a30;
+}
