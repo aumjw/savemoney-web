@@ -9,7 +9,9 @@
   <body>
     <header>
       <h1>บัญชีรายรับ-รายจ่าย</h1>
+      <button type="button" id="history">ประวัติการทำรายการ</button>
     </header>
+    <nav class="box"></nav>
     <div class="container">
       <div class="box-1">
         <p>รายรับ</p>
@@ -49,6 +51,15 @@
         <button type="button" id="btn-reset">ล้างข้อมูล</button>
       </div>
     </section>
+    <div id="modal" style="display: none">
+      <div id="modal-box">
+        <div id="modal-header">
+          <h2>ประวัติรายการ</h2>
+          <button id="btn-close">✕</button>
+        </div>
+        <div id="modal-list"></div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

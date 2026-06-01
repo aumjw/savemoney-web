@@ -12,6 +12,11 @@ const btnExpense = document.getElementById("btn-expense");
 const btnAdd = document.getElementById("btn-add");
 const btnRest = document.getElementById("btn-reset");
 
+const btnHistory = document.getElementById("history");
+const modal = document.getElementById("modal");
+const modalList = document.getElementById("modal-list");
+const btnClose = document.getElementById("btn-close");
+
 // ===== ตั้งวันที่เป็นวันนี้ =====
 dateInput.value = new Date().toISOString().split("T")[0];
 
@@ -87,6 +92,42 @@ btnRest.addEventListener("click", () => {
     localStorage.removeItem("items");
     render();
   }
+});
+btnHistory.addEventListener("click", () => {
+  // แสดงรายการทั้งหมด
+  if (items.length === 0) {
+    modalList.innerHTML =
+      "<p style='color:#888;text-align:center;'>ยังไม่มีรายการ</p>";
+  } else {
+    modalList.innerHTML = [...items]
+      .reverse()
+      .map(
+        (i) => `
+      <div class="history-item">
+        <div>
+          <div>${i.desc}</div>
+          <div style="color:#aaa;font-size:0.8rem;">${i.date}</div>
+        </div>
+        <span class="${i.type}">
+          ${i.type === "income" ? "+" : "-"}${i.amount.toLocaleString()} บาท
+        </span>
+      </div>
+    `,
+      )
+      .join("");
+  }
+
+  modal.style.display = "flex";
+});
+
+// ปิด modal
+btnClose.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// กดนอก modal ก็ปิด
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
 });
 
 // ===== โหลดข้อมูลตอนเปิดหน้า =====

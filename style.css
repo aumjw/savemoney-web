@@ -15,6 +15,19 @@ header {
   background: white;
   padding: 1rem 2rem;
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  padding: 8px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(19, 70, 165);
 }
 
 header h1 {
@@ -143,4 +156,53 @@ header h1 {
 
 .reset button:hover {
   background-color: #d85a30;
+}
+
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#modal-box {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#btn-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.history-item span.income {
+  color: #1d9e75;
+}
+.history-item span.expense {
+  color: #d85a30;
 }
