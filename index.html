@@ -3,61 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>บัญชีรายรับของฉัน</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header>
-      <h1>บัญชีรายรับ-รายจ่าย</h1>
-      <button type="button" id="history">ประวัติการทำรายการ</button>
-    </header>
-    <nav class="box"></nav>
     <div class="container">
-      <div class="box-1">
-        <p>รายรับ</p>
-        <h2 id="total-income">0 บาท</h2>
+      <div class="text">
+        <h3>Welcome</h3>
+        <p>ขอต้อนรับสู่เว็บในการบันทุกรายรับรายจ่ายของคุณ</p>
       </div>
-      <div class="box-2">
-        <p>รายจ่าย</p>
-        <h2 id="total-expense">0 บาท</h2>
-      </div>
-      <div class="box-3">
-        <p>คงเหลือ</p>
-        <h2 id="balance">0 บาท</h2>
-      </div>
-    </div>
-    <section class="about">
-      <div class="list">
-        รายการ
-        <input type="text" id="desc" placeholder="เช่น ค่าอาหาร , เงินเดือน" />
-      </div>
-      <div class="count">
-        จำนวนเงิน (บาท)
-        <input type="text" id="amount" placeholder="0" />
-      </div>
-      <div class="date">
-        วันที่
-        <input type="date" id="date" />
-      </div>
-      <div class="btn">
-        ประเภท
-        <button type="button" id="btn-income">รายรับ</button>
-        <button type="button" id="btn-expense">รายจ่าย</button>
-      </div>
-      <div class="add-list">
-        <button type="button" id="btn-add">เพิ่มรายการ</button>
-      </div>
-      <div class="reset">
-        <button type="button" id="btn-reset">ล้างข้อมูล</button>
-      </div>
-    </section>
-    <div id="modal" style="display: none">
-      <div id="modal-box">
-        <div id="modal-header">
-          <h2>ประวัติรายการ</h2>
-          <button id="btn-close">✕</button>
+      <div class="box">
+        <div class="inform">
+          <p>เข้าสู่ระบบ📲</p>
+          <input
+            type="text"
+            id="usname"
+            name="username"
+            placeholder="username"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="password"
+          />
+          <!-- ย้ายมาไว้ใน inform -->
+          <a href="#" onclick="login()">ลงชื่อเข้าใช้</a>
         </div>
-        <div id="modal-list"></div>
       </div>
     </div>
     <script src="script.js"></script>

@@ -20,6 +20,27 @@ const btnClose = document.getElementById("btn-close");
 // ===== ตั้งวันที่เป็นวันนี้ =====
 dateInput.value = new Date().toISOString().split("T")[0];
 
+// ===== เปลี่ยนชื่อ heeader =====
+function login() {
+  const username = document.getElementById("usname").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "") {
+    alert("กรอก username !");
+    return;
+  }
+  if (password == "") {
+    alert("กรุณากรอกรหัสผ่าน !");
+    return;
+  }
+  localStorage.setItem("username", username); // เก็บชื่อไว้
+  window.location.href = "main.html"; // ไปหน้า main
+}
+const showName = document.getElementById("show-name");
+if (showName) {
+  showName.textContent = localStorage.getItem("username");
+}
+
 // ===== สลับปุ่มประเภท =====
 function setType(type) {
   selectedType = type;
